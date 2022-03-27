@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Slide from '@mui/material/Slide';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
@@ -18,6 +17,7 @@ import { generateID } from '../../utility/helper';
 import SearchIcon from '@mui/icons-material/Search';
 import IconButton from '@mui/material/IconButton';
 import InputBase from '@mui/material/InputBase';
+import EmailCard from '../../components/email-card';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -70,24 +70,53 @@ export default function LandingPage(props) {
     }]);
     const [chats, setChats] = useState([{
         name: chatUsers[0].name,
+        subject: 'Hi Sir',
+        message: 't has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,'
     }, {
         name: chatUsers[4].name,
+        subject: 'Hi Sir',
+        message: 't has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,'
+
     }, {
         name: chatUsers[0].name,
+        subject: 'Hi Sir',
+        message: 't has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,'
+
     }, {
         name: chatUsers[4].name,
+        subject: 'Hi Sir',
+        message: 't has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,'
+
     }, {
         name: chatUsers[0].name,
+        subject: 'Hi Sir',
+        message: 't has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,'
+
     }, {
         name: chatUsers[4].name,
+        subject: 'Hi Sir',
+        message: 't has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,'
+
     }, {
         name: chatUsers[0].name,
+        subject: 'Hi Sir',
+        message: 't has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,'
+
     }, {
         name: chatUsers[4].name,
+        subject: 'Hi Sir',
+        message: 't has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,'
+
     }, {
         name: chatUsers[0].name,
+        subject: 'Hi Sir',
+        message: 't has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,'
+
     }, {
         name: chatUsers[4].name,
+        subject: 'Hi Sir',
+        message: 't has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,'
+
     }])
     function stringToColor(string) {
         let hash = 0;
@@ -194,77 +223,9 @@ export default function LandingPage(props) {
                     <Grid item xs={8}>
                         <Item>
                             <Grid contaniner direction={'column'}>
-                                <Stack direction="row" spacing={2} key={chatUsers[0].id} sx={{ p: 2 }}>
-                                    {/* <Avatar sx={{ bgcolor: deepOrange[500] }}>N</Avatar> */}
-                                    <Avatar {...stringAvatar(chatUsers[0].name)} />
-                                    <Stack item direction="column" sx={{ width: '100%', maxWidth: 'calc(100% - 57px)' }} alignItems={'center'}>
-                                        <Grid container>
-                                            <Typography variant="subtitle2" component="div" sx={{ flexGrow: 1, mr: 'auto', textAlign: 'initial' }}>
-                                                {chatUsers[0].name}
-                                            </Typography>
-                                        </Grid>
-                                        <Typography variant="body2" component="div" sx={{ mr: 'auto', mt: 0, ...useStyles().multiLineEllipsis }}>
-                                            {chatUsers[0].descrpition}
-                                        </Typography>
-                                    </Stack>
-                                    <Grid>
-                                        <IconButton aria-label="delete">
-                                            <SearchIcon />
-                                        </IconButton>
-                                    </Grid>
-                                </Stack>
-                                <Divider></Divider>
-                                { }
-                                <Grid direction={'column'} sx={{ maxHeight: 'calc(100vh - 204px)', height: 'calc(100vh - 204px)', flexWrap: 'nowrap', overflowY: 'auto' }}>
-                                    {chats.map(user => {
-                                        return user.name === chatUsers[0].name ? <>
-                                            <Grid container direction={'row'} sx={{ p: 2 }}>
-                                                <Avatar {...stringAvatar(chatUsers[0].name)} />
-                                                <Grid container xs={11} md={9} >
-                                                    <div style={{
-                                                        width: '16px',
-                                                        height: '16px',
-                                                        clipPath: 'polygon(100% 0, 0 0, 100% 75%)',
-                                                        backgroundColor: '#e3f2fd',
-                                                        marginRight: '-0.5px',
-                                                        marginTop: '-0.5px',
-                                                    }} />
-                                                    <Grid item xs={11} sx={{
-                                                        borderRadius: '0 16px 16px', p: 2, backgroundColor: '#e3f2fd',
-                                                    }}>
-                                                        <Typography variant="body2" sx={{ fontSize: '0.775rem' }} >
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
-                                                        </Typography>
-                                                    </Grid>
-                                                </Grid>
-                                            </Grid></> : <>
-                                            <Grid container direction={'row-reverse'} sx={{ p: 2 }} alignItems={'end'}>
-                                                <Avatar {...stringAvatar(user.name)} />
-                                                <Grid container xs={11} md={9} direction={'row-reverse'} alignItems={'end'}>
-                                                    <div style={{
-                                                        width: '16px',
-                                                        height: '16px',
-                                                        clipPath: 'polygon(100% 100%, 0 34%, 0 100%)',
-                                                        backgroundColor: '#fff3e0',
-                                                        marginLeft: '-0.5px',
-                                                    }} />
-                                                    <Grid item xs={11} sx={{
-                                                        borderRadius: '16px 16px 0', p: 2, backgroundColor: '#fff3e0',
-                                                    }}>
-                                                        <Typography variant="body2" sx={{ fontSize: '0.775rem' }} >
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
-                                                        </Typography>
-                                                    </Grid>
-
-                                                </Grid>
-
-                                            </Grid></>
-                                    })}
-
-
+                                <Grid direction={'column'} sx={{ maxHeight: 'calc(100vh - 130px)', height: 'calc(100vh - 130px)', flexWrap: 'nowrap', overflowY: 'auto' }}>
+                                    {chats.map(user => <EmailCard user={user} />)}
                                 </Grid>
-
-
                             </Grid>
                         </Item>
                     </Grid>
