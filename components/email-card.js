@@ -13,13 +13,6 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: 0,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
-
 export default function EmailCard(props) {
     function stringToColor(string) {
         let hash = 0;
@@ -61,18 +54,18 @@ export default function EmailCard(props) {
                     <Grid container direction={'row'} sx={{ p: 0 }} justifyContent='start'>
                         <Avatar {...stringAvatar(props.user.name)} />
                         <Grid direction={'column'} justifyContent={'flex-start'} sx={{ ml: 1, mr: 'auto', textAlign: 'start' }} >
-                            <Typography variant="body2" sx={{ fontSize: '0.775rem', fontWeight: 500, pr: 1, width: 'fit-content' }} >
+                            <Typography variant="body2" sx={{ fontSize: '0.725rem', fontWeight: 500, pr: 1, width: 'fit-content' }} >
                                 {props.user.name}
                             </Typography>
-                            <Typography variant="body2" sx={{ fontSize: '0.775rem', width: 'fit-content' }} >
+                            <Typography variant="body2" sx={{ fontSize: '0.725rem', width: 'fit-content' }} >
                                 {`<${props.user.name.toLowerCase().replace(" ", "_")}@gmail.com>`}
                             </Typography>
                         </Grid>
                         <Grid direction={'column'}>
-                            <Typography variant="body2" sx={{ fontSize: '0.775rem', textAlign: 'end' }} >
+                            <Typography variant="body2" sx={{ fontSize: '0.725rem', textAlign: 'end' }} >
                                 Dec 29, 2021, 5:38 PM
                             </Typography>
-                            <Grid sx={{ p: 0, py: 1, borderColor: 'primary.main' }} >
+                            <Grid sx={{ p: 0, pt: 1, borderColor: 'primary.main' }} >
                                 <Button size="small" sx={{ mr: 1 }} variant='contained'>PDF(1)</Button>
                                 <Button size="small" sx={{ mr: 1 }} disabled variant='contained' > Docx(0)</Button>
                                 <Button size="small" sx={{}} disabled variant='contained'> Excel(0)</Button>
@@ -83,10 +76,10 @@ export default function EmailCard(props) {
                 <AccordionDetails>
                     <Grid direction={'column'}>
                         <Divider></Divider>
-                        <Typography bottomGutter variant="body2" component="div" sx={{ textAlign: 'initial', p: 2, pb: 0 }}>
+                        <Typography bottomGutter variant="body2" component="div" sx={{ textAlign: 'initial', p: 2, pb: 0, fontSize: '0.725rem', fontWeight: 300, color: "#000" }}>
                             {props.user.subject}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'initial', p: 2 }}>
+                        <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'initial', p: 2, fontSize: '0.725rem', fontWeight: 300, color: "#000" }}>
                             {props.user.message}
                         </Typography>
 

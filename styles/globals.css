@@ -37,5 +37,22 @@ a {
 
 *::-webkit-scrollbar-thumb:active {
   background: rgb(214, 39, 39) !important;
-  border-radius: 3px 
+  border-radius: 3px
+}
+
+
+.links {
+  stroke: #999;
+  stroke-opacity: 0.6;
+  stroke-width: 1px;
+}
+
+text {
+  pointer-events: none;
+  fill: #000;
+  font: 10px sans-serif;
+}
+
+svg {
+  border: 1px solid #000;
 }
